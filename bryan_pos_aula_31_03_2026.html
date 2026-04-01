@@ -1,0 +1,498 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Resumo Pós-Aula — Bryan — CZK English</title>
+
+  <script type="text/javascript" src="https://me.kis.v2.scr.kaspersky-labs.com/FD126C42-EBFA-4E12-B309-BB3FDD723AC1/main.js?attr=eGYtC8KMnkX2o0h6Devj-AdXXGuhMAZWcq4ij3Vh5saJnGu3QDTNONHQW5pMksvqTz39aCcwDNOhXdG7hLvZVwdr919ykyTj1rvENNHSX9e7ZtR4ACozTUi7C8djrobIr0csB4_iVhRG_HDKS7mncjvrwG7uCQ-NCnlh39_WZIO2AD2ZHrwgislgLyKytAmGviYrbnZd7IGO3aKN1OIeAfJAv0SkdV94dwhkICVwgRqTwUzetJ1iNFde-MU8_7C9fZuz3pGxIdQvn-RrVuXBMA" charset="UTF-8"></script><style>
+    :root{
+      --page-bg: #f4f7fa;
+      --card-bg: #fff;
+      --accent: #2f86e6;
+      --accent-dark: #1f6fd1;
+      --green: #36b37e;
+      --muted: #6b7280;
+      --border: #e6eef8;
+      --box-radius: 12px;
+      --card-width: 720px;
+    }
+
+    html,body{
+      height:100%;
+      margin:0;
+      padding:0;
+      background:var(--page-bg);
+      font-family:Inter, "Segoe UI", Roboto, Arial, sans-serif;
+    }
+
+    .wrap{
+      min-height:100%;
+      display:flex;
+      align-items:flex-start;
+      justify-content:center;
+      padding:48px 20px;
+    }
+
+    .card{
+      width:100%;
+      max-width:var(--card-width);
+      background:var(--card-bg);
+      border-radius:18px;
+      padding:28px;
+      box-shadow:0 6px 22px rgba(33,47,60,0.06);
+      border:1px solid rgba(15,33,64,0.03);
+    }
+
+    header{
+      display:flex;
+      justify-content:space-between;
+      align-items:flex-start;
+      gap:12px;
+      margin-bottom:8px;
+    }
+
+    .badge{
+      background:linear-gradient(180deg,#fff,#f2fbff);
+      border:1px solid var(--border);
+      padding:8px 12px;
+      border-radius:999px;
+      color:var(--accent);
+      font-weight:700;
+      font-size:0.85rem;
+    }
+
+    h1{
+      margin:0;
+      font-size:1.3rem;
+      color:#0f1724;
+    }
+
+    .meta{
+      color:var(--muted);
+      font-size:0.92rem;
+      margin-top:6px;
+    }
+
+    .actions{
+      display:flex;
+      gap:10px;
+    }
+
+    .btn{
+      display:inline-flex;
+      align-items:center;
+      gap:8px;
+      padding:10px 14px;
+      border-radius:10px;
+      border:none;
+      background:var(--accent);
+      color:#fff;
+      text-decoration:none;
+      font-weight:600;
+      cursor:pointer;
+      box-shadow:0 6px 14px rgba(47,134,230,0.12);
+    }
+
+    .btn.secondary{
+      background:#fff;
+      color:var(--accent);
+      border:1px solid var(--border);
+      box-shadow:none;
+    }
+
+    main{margin-top:18px;}
+    section{margin-top:18px;}
+
+    .panel{
+      background:#fbfdff;
+      border-radius:12px;
+      padding:16px;
+      border:1px solid var(--border);
+    }
+
+    .outline-card{
+      border-radius:10px;
+      border:1px solid var(--border);
+      padding:16px;
+      background:#fff;
+    }
+
+    .vocab-grid{
+      display:flex;
+      gap:14px;
+      flex-wrap:wrap;
+      margin-top:10px;
+    }
+
+    .vocab{
+      flex:1;
+      min-width:220px;
+      border-radius:10px;
+      padding:14px;
+      border:2px solid #dfeefe;
+      background:#fff;
+    }
+
+    .vocab.green{
+      border-color:#c9f3dc;
+      background:#f5fff6;
+    }
+
+    .vocab h3{
+      margin:0;
+      font-size:1rem;
+      color:#154360;
+    }
+
+    .vocab p{
+      margin:8px 0 0 0;
+      color:var(--muted);
+      font-size:0.95rem;
+    }
+
+    .media-row{
+      display:flex;
+      gap:14px;
+      margin-top:12px;
+      flex-wrap:wrap;
+    }
+
+    .media-btn{
+      background:#fff;
+      border:1px solid var(--border);
+      padding:12px 16px;
+      border-radius:10px;
+      font-weight:700;
+      color:var(--accent);
+      text-decoration:none;
+      display:inline-flex;
+      align-items:center;
+      gap:10px;
+      min-width:200px;
+      justify-content:center;
+    }
+
+    .homework{
+      background:#f3fff6;
+      border:1px solid #d7f5df;
+      border-radius:10px;
+      padding:14px;
+      margin-top:10px;
+    }
+
+    .speaking{
+      margin-top:18px;
+      padding:16px;
+      border-radius:12px;
+      background:linear-gradient(180deg,#ffffff,#fbfdff);
+      border:1px solid var(--border);
+      max-width:640px;
+    }
+
+    .speaking h2{
+      margin:0 0 10px 0;
+      font-size:1.05rem;
+      color:#0f1724;
+    }
+
+    .talk-table{
+      width:100%;
+      border-collapse:collapse;
+      border-radius:10px;
+      overflow:hidden;
+      background:#fff;
+      border:1px solid #e1e9f5;
+      font-size:0.9rem;
+    }
+
+    .talk-table th,
+    .talk-table td{
+      padding:8px 10px;
+      text-align:left;
+    }
+
+    .talk-table th{
+      background:#eef4ff;
+      color:#1b3556;
+      font-weight:700;
+      border-bottom:1px solid #dde6fa;
+    }
+
+    .row-teacher{
+      background:#e7f2ff;
+    }
+
+    .row-student{
+      background:#e8f7ef;
+    }
+
+    .talk-label{
+      font-weight:700;
+    }
+
+    .talk-percent{
+      font-weight:700;
+      color:#0f1724;
+    }
+
+    .talk-time{
+      color:var(--muted);
+    }
+
+    footer{
+      margin-top:20px;
+      color:var(--muted);
+      font-size:0.9rem;
+      text-align:center;
+    }
+
+    @media (max-width:720px){
+      .card{padding:18px;border-radius:14px;}
+      .vocab-grid{flex-direction:column;}
+      .media-row{flex-direction:column;}
+    }
+  </style>
+</head>
+<body>
+  <div class="wrap">
+    <article class="card" role="main">
+      <header>
+        <div>
+          <div style="display:flex;gap:10px;align-items:center;">
+            <span class="badge">PÓS-AULA</span>
+            <h1>Música, leitura e compreensão de contexto</h1>
+          </div>
+          <div class="meta" style="margin-top:8px;">
+            <strong>Professor:</strong> César &nbsp;•&nbsp;
+            <strong>Aluno:</strong> Bryan &nbsp;•&nbsp;
+            <strong>Data:</strong> 31/03/2026
+          </div>
+        </div>
+
+        <div class="actions">
+          <a class="btn" href="#" onclick="window.print();return false;">Imprimir / Salvar PDF</a>
+        </div>
+      </header>
+
+      <main>
+        <section class="panel">
+          <p style="margin:0;font-weight:600;color:#08325a;">
+            Revisão de directions, prática de leitura com texto sobre música e vocabulário de compreensão em contexto.
+          </p>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Resumo da Aula</h2>
+          <div class="outline-card">
+            <p style="margin:0 0 8px 0;">
+              Começamos com uma <strong>revisão de direções e localização</strong>, retomando estruturas como <em>turn left on</em>, <em>at the corner</em>, <em>go straight</em>, <em>go ahead</em>, <em>across</em>, <em>between</em>, <em>next to</em> e a diferença entre <strong>on</strong> (rua de forma mais geral) e <strong>at</strong> (ponto específico). Também revisamos expressões como <em>down the street</em> e <em>around the corner</em>, observando como o sentido muda de acordo com o contexto.
+            </p>
+            <p style="margin:0 0 8px 0;">
+              Depois, a aula focou em um <strong>texto de leitura sobre música</strong> e seus efeitos no dia a dia. Bryan leu trechos em inglês, traduziu para o português e trabalhou compreensão por contexto. Apareceram pontos importantes como <em>actually</em> (na verdade, e não “atualmente”), <em>worries</em>, <em>while</em>, <em>however</em>, <em>according to</em>, <em>kind</em> e a ideia de que certos tipos de música podem ajudar a relaxar, estudar, se exercitar e dormir melhor.
+            </p>
+            <p style="margin:0 0 8px 0;">
+              No final, houve uma parte mais comunicativa sobre <strong>preferências musicais</strong>, com perguntas sobre estilos, artistas favoritos, hábitos de ouvir música durante o dia, jogos, rotina e estudo. Também conversamos sobre estratégias de exposição ao inglês, como assistir conteúdos com legendas em inglês e começar leituras mais simples em inglês para treinar vocabulário e compreensão.
+            </p>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Key Vocabulary</h2>
+          <div class="vocab-grid">
+            <div class="vocab">
+              <h3>Worries</h3>
+              <p style="margin-top:8px;font-size:0.92rem;color:var(--muted);">
+                <em>(pt) preocupações</em><br>
+                <small>Music makes your worries go away.</small>
+              </p>
+            </div>
+            <div class="vocab green">
+              <h3>Actually</h3>
+              <p style="margin-top:8px;font-size:0.92rem;color:var(--muted);">
+                <em>(pt) na verdade</em><br>
+                <small>Music is actually good for your health.</small>
+              </p>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Vocabulário da aula</h2>
+          <div class="outline-card">
+            <h3 style="margin-top:0;">Directions e localização</h3>
+            <ul>
+              <li><strong>turn left</strong> – vire à esquerda</li>
+              <li><strong>on the street</strong> – na rua / ao longo da rua</li>
+              <li><strong>at the corner</strong> – na esquina / em um ponto específico</li>
+              <li><strong>go straight</strong> – vá reto</li>
+              <li><strong>go ahead</strong> – siga em frente</li>
+              <li><strong>down the street</strong> – mais para frente / seguindo pela rua</li>
+              <li><strong>around the corner</strong> – virando a esquina / ali perto da esquina</li>
+              <li><strong>across</strong> – do outro lado / atravessando</li>
+              <li><strong>between</strong> – entre</li>
+              <li><strong>next to</strong> – ao lado de</li>
+              <li><strong>blocks</strong> – quarteirões</li>
+            </ul>
+
+            <h3>Vocabulário do texto sobre música</h3>
+            <ul>
+              <li><strong>actually</strong> – na verdade</li>
+              <li><strong>scientific research</strong> – pesquisa científica / pesquisas científicas</li>
+              <li><strong>worry / worries</strong> – preocupação / preocupações</li>
+              <li><strong>go away</strong> – ir embora / desaparecer</li>
+              <li><strong>while</strong> – enquanto</li>
+              <li><strong>however</strong> – porém / mas</li>
+              <li><strong>according to</strong> – de acordo com</li>
+              <li><strong>learners</strong> – alunos / aprendizes</li>
+              <li><strong>kind</strong> – tipo</li>
+              <li><strong>right kind</strong> – tipo certo</li>
+              <li><strong>performance</strong> – desempenho</li>
+              <li><strong>good night’s sleep</strong> – boa noite de sono</li>
+            </ul>
+
+            <h3>Vocabulário de conversa</h3>
+            <ul>
+              <li><strong>rap</strong> – rap</li>
+              <li><strong>pop</strong> – pop</li>
+              <li><strong>folk</strong> – folclórico / música folk</li>
+              <li><strong>singer</strong> – cantor(a)</li>
+              <li><strong>favorite singer</strong> – cantor favorito</li>
+              <li><strong>free time</strong> – tempo livre</li>
+              <li><strong>to clean the house</strong> – arrumar / limpar a casa</li>
+              <li><strong>mission accomplished</strong> – missão cumprida</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Frases modelo da aula</h2>
+          <div class="outline-card">
+            <ul>
+              <li>Turn left on Johnson.</li>
+              <li>The supermarket is on the left.</li>
+              <li>Go straight.</li>
+              <li>Go ahead.</li>
+              <li>It’s down the street.</li>
+              <li>It’s around the corner.</li>
+              <li>Music helps you relax.</li>
+              <li>Music helps you study.</li>
+              <li>Music helps you exercise.</li>
+              <li>Music helps you sleep.</li>
+              <li>Everyone loves listening to music, right?</li>
+              <li>Listening to the music you love makes your worries go away.</li>
+              <li>Is it a good idea to listen to music while you study?</li>
+              <li>According to research, learners remember new words and ideas while they listen to nice classical music.</li>
+              <li>Pop music makes me happy.</li>
+              <li>Classical music helps me relax.</li>
+              <li>Rock music helps me exercise.</li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Correções importantes</h2>
+          <div class="outline-card">
+            <ul>
+              <li><strong>Actually ≠ atualmente</strong><br>
+                <em>Actually</em> significa <strong>na verdade</strong>. Para “atualmente”, o mais comum seria <em>currently</em> ou <em>nowadays</em>.
+              </li>
+              <li><strong>While = enquanto</strong><br>
+                Em frases com duas ações ao mesmo tempo, usamos <em>while</em>: <em>I study while I listen to music.</em>
+              </li>
+              <li><strong>There is / There are</strong><br>
+                <em>There is</em> para singular e <em>there are</em> para plural. Ex.: <em>There is one car.</em> / <em>There are two cars.</em>
+              </li>
+              <li><strong>Worry x worries</strong><br>
+                <em>Worry</em> pode ser verbo (se preocupar). <em>Worries</em> no texto apareceu como substantivo plural: <strong>preocupações</strong>.
+              </li>
+              <li><strong>Rap</strong><br>
+                A pronúncia precisa ser mais curta em inglês, para não soar como a forma em português.
+              </li>
+              <li><strong>Made it harder</strong><br>
+                A ideia não é “fazer difícil” literalmente, mas <strong>fazer ficar mais difícil</strong> ou <strong>tornar mais difícil</strong>.
+              </li>
+              <li><strong>Listen to music</strong><br>
+                Em inglês, normalmente usamos <em>listen to</em>. Ex.: <em>I listen to music every day.</em>
+              </li>
+              <li><strong>Do como auxiliar</strong><br>
+                Em perguntas no presente, o <em>do</em> muitas vezes não é traduzido literalmente. Ex.: <em>Do you want to feel good?</em> = <strong>Você quer se sentir bem?</strong>
+              </li>
+              <li><strong>Kind</strong><br>
+                <em>Kind</em> aqui significa <strong>tipo</strong>, como em <em>the right kind of music</em> = o tipo certo de música.
+              </li>
+            </ul>
+          </div>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Transcrição &amp; Gravação</h2>
+          <div class="media-row">
+            <a class="media-btn" href="#" role="button">📄 Acessar transcrição</a>
+            <a
+              class="media-btn"
+              href="https://youtu.be/RsjAXRNrZZI"
+              target="_blank"
+              rel="noopener noreferrer"
+              role="button"
+              style="background:linear-gradient(180deg,#1f6fd1,#2f86e6);color:#fff;border:none;min-width:260px;"
+            >
+              🎥 Assistir gravação (acesso privado)
+            </a>
+          </div>
+        </section>
+
+        <section class="speaking" aria-label="Distribuição de fala">
+          <h2>Tempo de Fala (Talk Time)</h2>
+          <table class="talk-table">
+            <thead>
+              <tr>
+                <th>Quem falou</th>
+                <th>Porcentagem</th>
+                <th>Duração aproximada</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr class="row-teacher">
+                <td><span class="talk-label">César (Professor)</span></td>
+                <td><span class="talk-percent">64%</span></td>
+                <td class="talk-time">~32 minutos</td>
+              </tr>
+              <tr class="row-student">
+                <td><span class="talk-label">Bryan</span></td>
+                <td><span class="talk-percent">36%</span></td>
+                <td class="talk-time">~18 minutos</td>
+              </tr>
+            </tbody>
+          </table>
+        </section>
+
+        <section>
+          <h2 style="margin-bottom:8px;">Homework</h2>
+          <div class="homework">
+            <p style="margin:0 0 8px 0;">
+              📌 <strong>Lição de casa (como combinado em aula):</strong>
+            </p>
+            <ul style="margin:0 0 6px 18px;padding:0;font-size:0.94rem;color:var(--muted);">
+              <li>Lembrar de ler o pós-aula de 2 a 3x na semana.</li>
+            </ul>
+          </div>
+
+          <div style="margin-top:14px;">
+            <a class="btn" href="https://wa.me" style="background:#25D366;border-radius:10px;box-shadow:none;">
+              💬 Falar comigo no WhatsApp
+            </a>
+          </div>
+        </section>
+
+      </main>
+
+      <footer>
+        <p style="margin:18px 0 0 0;color:var(--muted);font-size:0.9rem;">
+          © 2025 CZK English • Este conteúdo é exclusivo para fins educacionais. • Suporte: czkenglish@gmail.com
+        </p>
+      </footer>
+    </article>
+  </div>
+</body>
+</html>
